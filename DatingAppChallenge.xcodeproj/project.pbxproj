@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00883611B1C17632C1B1F3F9 /* Pods_DatingAppChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB27D8AFC14F42A85B8066C /* Pods_DatingAppChallenge.framework */; };
 		70D8CEA025562BB5001EC899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CE9F25562BB5001EC899 /* AppDelegate.swift */; };
 		70D8CEA225562BB5001EC899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEA125562BB5001EC899 /* SceneDelegate.swift */; };
 		70D8CEA425562BB5001EC899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEA325562BB5001EC899 /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		70D8CEA925562BB7001EC899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D8CEA825562BB7001EC899 /* Assets.xcassets */; };
 		70D8CEAC25562BB7001EC899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D8CEAA25562BB7001EC899 /* LaunchScreen.storyboard */; };
 		70D8CEB525562E92001EC899 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */; };
+		70D8CEBC255657A4001EC899 /* CollectionViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		70D8CEAB25562BB7001EC899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D8CEAD25562BB7001EC899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAnimation.swift; sourceTree = "<group>"; };
+		8DB27D8AFC14F42A85B8066C /* Pods_DatingAppChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45B331A3E1F08F81A8E215D /* Pods-DatingAppChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppChallenge.release.xcconfig"; path = "Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		E9418F50FED6E505471910F8 /* Pods-DatingAppChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppChallenge.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00883611B1C17632C1B1F3F9 /* Pods_DatingAppChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0366DCD1309B4C8AC5E73A50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DB27D8AFC14F42A85B8066C /* Pods_DatingAppChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2938DA5A6E315DC91E2A549F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9418F50FED6E505471910F8 /* Pods-DatingAppChallenge.debug.xcconfig */,
+				B45B331A3E1F08F81A8E215D /* Pods-DatingAppChallenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		70D8CE9325562BB5001EC899 = {
 			isa = PBXGroup;
 			children = (
 				70D8CE9E25562BB5001EC899 /* DatingAppChallenge */,
 				70D8CE9D25562BB5001EC899 /* Products */,
+				2938DA5A6E315DC91E2A549F /* Pods */,
+				0366DCD1309B4C8AC5E73A50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +92,7 @@
 				70D8CEAA25562BB7001EC899 /* LaunchScreen.storyboard */,
 				70D8CEAD25562BB7001EC899 /* Info.plist */,
 				70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */,
+				70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */,
 			);
 			path = DatingAppChallenge;
 			sourceTree = "<group>";
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70D8CEB025562BB7001EC899 /* Build configuration list for PBXNativeTarget "DatingAppChallenge" */;
 			buildPhases = (
+				B9DCFFFCC9F997ABCE696284 /* [CP] Check Pods Manifest.lock */,
 				70D8CE9825562BB5001EC899 /* Sources */,
 				70D8CE9925562BB5001EC899 /* Frameworks */,
 				70D8CE9A25562BB5001EC899 /* Resources */,
+				13B7EF78D91E6CA9A3EAE6B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,12 +164,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13B7EF78D91E6CA9A3EAE6B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9DCFFFCC9F997ABCE696284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DatingAppChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70D8CE9825562BB5001EC899 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				70D8CEA425562BB5001EC899 /* ViewController.swift in Sources */,
+				70D8CEBC255657A4001EC899 /* CollectionViewAnimation.swift in Sources */,
 				70D8CEA025562BB5001EC899 /* AppDelegate.swift in Sources */,
 				70D8CEB525562E92001EC899 /* MyCollectionViewCell.swift in Sources */,
 				70D8CEA225562BB5001EC899 /* SceneDelegate.swift in Sources */,
@@ -287,6 +359,7 @@
 		};
 		70D8CEB125562BB7001EC899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9418F50FED6E505471910F8 /* Pods-DatingAppChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +379,7 @@
 		};
 		70D8CEB225562BB7001EC899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45B331A3E1F08F81A8E215D /* Pods-DatingAppChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

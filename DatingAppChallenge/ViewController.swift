@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Differ
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIGestureRecognizerDelegate {
   
@@ -42,10 +43,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   func onCellTap(sender : UITapGestureRecognizer) {
     if let cell = sender.view {
       let myCell = cell as! MyCollectionViewCell
-      matches = matches.filter { (matchIndex) -> Bool in
+      let newMatches = matches.filter { (matchIndex) -> Bool in
         return matchIndex != myCell.index
       }
-      collectionView.reloadData()
+      collectionView.animateItemChanges(oldData: matches, newData: newMatches) {
+        self.matches = newMatches
+      }
     }
   }
 }
