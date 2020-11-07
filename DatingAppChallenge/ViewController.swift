@@ -10,12 +10,12 @@ import Differ
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIGestureRecognizerDelegate {
   
-  var matches : [Int]!
+  var matches : [MatchModel]!
   @IBOutlet weak var collectionView: UICollectionView!
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    matches = [0,1,2,3,4,5,6]
+    matches = generateMatches()
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.reloadData()
@@ -28,9 +28,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MyCollectionViewCell
     
-    cell.index = matches[indexPath.item]
-    cell.nameLabel.text = "Hello \(String(describing: cell.index))"
-    
+    //setup data for cell
+    let match = matches[indexPath.item]
+    cell.index = match.userId
+    cell.nameLabel.text = match.name
+    cell.matchImageView.image = UIImage(named: match.imageProfile)
     //create tap gesture
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onCellTap(sender:))
     )
@@ -43,13 +45,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   func onCellTap(sender : UITapGestureRecognizer) {
     if let cell = sender.view {
       let myCell = cell as! MyCollectionViewCell
-      let newMatches = matches.filter { (matchIndex) -> Bool in
-        return matchIndex != myCell.index
+      let newMatches = matches.filter { (match) -> Bool in
+        return match.userId != myCell.index
       }
       collectionView.animateItemChanges(oldData: matches, newData: newMatches) {
         self.matches = newMatches
       }
     }
+  }
+  
+  func generateMatches() -> [MatchModel] {
+    let names = ["LeonardoDicaprio", "Pluffy", "ConanObrien", "Raj", "TomCruise", "WillSmith"]
+    var result : [MatchModel] = []
+    var userId : Int = 100
+    for name in names {
+      result.append(MatchModel(userId: userId, name: name, imageProfile: name))
+      userId = userId + 1
+    }
+    return result
   }
 }
 

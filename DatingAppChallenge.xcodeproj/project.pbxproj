@@ -16,6 +16,7 @@
 		70D8CEAC25562BB7001EC899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D8CEAA25562BB7001EC899 /* LaunchScreen.storyboard */; };
 		70D8CEB525562E92001EC899 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */; };
 		70D8CEBC255657A4001EC899 /* CollectionViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */; };
+		70D8CEBF25565FAF001EC899 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D8CEBE25565FAF001EC899 /* MatchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		70D8CEAD25562BB7001EC899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAnimation.swift; sourceTree = "<group>"; };
+		70D8CEBE25565FAF001EC899 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
 		8DB27D8AFC14F42A85B8066C /* Pods_DatingAppChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45B331A3E1F08F81A8E215D /* Pods-DatingAppChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppChallenge.release.xcconfig"; path = "Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		E9418F50FED6E505471910F8 /* Pods-DatingAppChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppChallenge.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppChallenge/Pods-DatingAppChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				70D8CEAD25562BB7001EC899 /* Info.plist */,
 				70D8CEB425562E92001EC899 /* MyCollectionViewCell.swift */,
 				70D8CEBB255657A4001EC899 /* CollectionViewAnimation.swift */,
+				70D8CEBE25565FAF001EC899 /* MatchModel.swift */,
 			);
 			path = DatingAppChallenge;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D8CEA425562BB5001EC899 /* ViewController.swift in Sources */,
+				70D8CEBF25565FAF001EC899 /* MatchModel.swift in Sources */,
 				70D8CEBC255657A4001EC899 /* CollectionViewAnimation.swift in Sources */,
 				70D8CEA025562BB5001EC899 /* AppDelegate.swift in Sources */,
 				70D8CEB525562E92001EC899 /* MyCollectionViewCell.swift in Sources */,

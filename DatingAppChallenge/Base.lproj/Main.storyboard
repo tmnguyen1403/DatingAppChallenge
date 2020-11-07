@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x5z-oP-4IP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x5z-oP-4IP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qva-UL-XKj">
+                                <color key="backgroundColor" red="0.38498893821835667" green="0.50427737945281592" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.41826356562164657" green="1" blue="0.7261766674258967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eyh-X5-ELb">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,30 +29,41 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="xad-Si-L4Y" customClass="MyCollectionViewCell" customModule="DatingAppChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="79" y="0.0" width="256" height="256"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTI-db-jhm">
-                                            <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-Ru-QoR">
-                                                    <rect key="frame" x="10" y="10" width="236" height="20.5"/>
-                                                    <color key="backgroundColor" red="0.75332546320000005" green="1" blue="0.58238484020000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-Ru-QoR">
+                                                    <rect key="frame" x="5" y="128" width="150" height="27"/>
+                                                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="ConanObrien" translatesAutoresizingMaskIntoConstraints="NO" id="C29-ii-sWf">
+                                                    <rect key="frame" x="5" y="5" width="150" height="118"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="C29-ii-sWf" secondAttribute="height" multiplier="75:59" id="bJQ-pr-ljF"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MdJ-Ru-QoR" firstAttribute="leading" secondItem="gTI-db-jhm" secondAttribute="leading" constant="10" id="7jp-cE-uj3"/>
-                                                <constraint firstAttribute="trailing" secondItem="MdJ-Ru-QoR" secondAttribute="trailing" constant="10" id="JYI-0b-Wtf"/>
-                                                <constraint firstItem="MdJ-Ru-QoR" firstAttribute="top" secondItem="gTI-db-jhm" secondAttribute="top" constant="10" id="bLf-Qu-5GE"/>
+                                                <constraint firstItem="MdJ-Ru-QoR" firstAttribute="top" secondItem="C29-ii-sWf" secondAttribute="bottom" constant="5" id="8xk-UE-8qa"/>
+                                                <constraint firstItem="C29-ii-sWf" firstAttribute="leading" secondItem="gTI-db-jhm" secondAttribute="leading" constant="5" id="IhX-DL-6kj"/>
+                                                <constraint firstAttribute="trailing" secondItem="C29-ii-sWf" secondAttribute="trailing" constant="5" id="cEl-Hu-MdM"/>
+                                                <constraint firstAttribute="bottom" secondItem="MdJ-Ru-QoR" secondAttribute="bottom" constant="5" id="pKb-yo-y7w"/>
+                                                <constraint firstAttribute="trailing" secondItem="MdJ-Ru-QoR" secondAttribute="trailing" constant="5" id="pxV-Qm-Nb7"/>
+                                                <constraint firstItem="C29-ii-sWf" firstAttribute="top" secondItem="gTI-db-jhm" secondAttribute="top" constant="5" id="urq-Yo-30U"/>
+                                                <constraint firstItem="MdJ-Ru-QoR" firstAttribute="leading" secondItem="gTI-db-jhm" secondAttribute="leading" constant="5" id="wli-hO-lpe"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         <gestureRecognizers/>
-                                        <size key="customSize" width="256" height="256"/>
+                                        <size key="customSize" width="160" height="160"/>
                                         <connections>
+                                            <outlet property="matchImageView" destination="C29-ii-sWf" id="9ud-76-U3W"/>
                                             <outlet property="nameLabel" destination="MdJ-Ru-QoR" id="5jJ-Xx-p2F"/>
                                         </connections>
                                     </collectionViewCell>
@@ -61,6 +72,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="x5z-oP-4IP" secondAttribute="bottom" id="Q9P-Gc-o5P"/>
+                            <constraint firstItem="x5z-oP-4IP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WhA-UI-0It"/>
+                            <constraint firstItem="x5z-oP-4IP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cdm-hA-wGa"/>
+                            <constraint firstItem="x5z-oP-4IP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eVw-ZG-Ib1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="x5z-oP-4IP" id="WQJ-Fg-Uva"/>
@@ -72,11 +89,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ConanObrien" width="278" height="182"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

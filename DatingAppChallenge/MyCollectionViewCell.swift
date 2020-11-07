@@ -9,6 +9,7 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
     
+  @IBOutlet weak var matchImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   var index: Int!
 }
