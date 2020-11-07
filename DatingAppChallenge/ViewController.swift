@@ -48,9 +48,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       let newMatches = matches.filter { (match) -> Bool in
         return match.userId != myCell.index
       }
-      collectionView.animateItemChanges(oldData: matches, newData: newMatches) {
+      collectionView.animateItemChanges(oldData: matches, newData: newMatches, updateData: {
         self.matches = newMatches
-      }
+      })
     }
   }
   
