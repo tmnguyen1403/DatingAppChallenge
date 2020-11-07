@@ -13,7 +13,7 @@ DatingApp is a simple app that allows users to see matches and select persons th
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).  
 ### Notes
-1. Delete cell
+1. Delete cell  
 _ I first attempted to create a TapGestureRecognizer in Storyboard and used it for a custom cell. However, when the collection view are created, only the first cell has the tapGesture.  
 _ I then create the TapGestureRecognizer with code in ViewController and add it to every cell  
 
